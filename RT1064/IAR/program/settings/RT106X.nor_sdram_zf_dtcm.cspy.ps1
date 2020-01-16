@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "E:\IAR\common\bin\cspybat" -f "C:\Users\Think\Desktop\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --backend -f "C:\Users\Think\Desktop\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
+& "I:\IAR\common\bin\cspybat" -f "C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --backend -f "C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
 }
 else
 {
-& "E:\IAR\common\bin\cspybat" -f "C:\Users\Think\Desktop\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\Think\Desktop\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
+& "I:\IAR\common\bin\cspybat" -f "C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
 }
