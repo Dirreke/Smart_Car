@@ -1,16 +1,16 @@
-"I:\IAR\arm\bin\armproc.dll" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armproc.dll" 
 
-"I:\IAR\arm\bin\armjlink2.dll" 
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armjlink2.dll" 
 
-"C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\nor_sdram_zf_dtcm\Exe\RT106X.out" 
+"D:\GMY0\A_competition\Smart_Car\Smart_Car\RT1064\IAR\program\nor_sdram_zf_dtcm\Exe\RT106X.out" 
 
---plugin="I:\IAR\arm\bin\armbat.dll" 
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\bin\armbat.dll" 
 
---device_macro="I:\IAR\arm\config\debugger\NXP\iMXRT.dmac" 
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\NXP\iMXRT.dmac" 
 
---device_macro="I:\IAR\arm\config\debugger\NXP\iMXRT_Trace.dmac" 
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\debugger\NXP\iMXRT_Trace.dmac" 
 
---flash_loader="I:\IAR\arm\config\flashloader\NXP\FlashIMXRT1064_SIP.board" 
+--flash_loader="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\arm\config\flashloader\NXP\FlashIMXRT1064_SIP.board" 
 
 
 
