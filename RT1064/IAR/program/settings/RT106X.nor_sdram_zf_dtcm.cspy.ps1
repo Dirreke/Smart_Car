@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "E:\IAR\common\bin\cspybat" -f "C:\Users\Think\Desktop\smart_car_new\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --backend -f "C:\Users\Think\Desktop\smart_car_new\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\GMY0\A_competition\Smart_Car\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --backend -f "D:\GMY0\A_competition\Smart_Car\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
 }
 else
 {
-& "E:\IAR\common\bin\cspybat" -f "C:\Users\Think\Desktop\smart_car_new\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\Think\Desktop\smart_car_new\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
+& "D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\GMY0\A_competition\Smart_Car\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.general.xcl" --debug_file=$debugfile --backend -f "D:\GMY0\A_competition\Smart_Car\Smart_Car\RT1064\IAR\program\settings\RT106X.nor_sdram_zf_dtcm.driver.xcl" 
 }
