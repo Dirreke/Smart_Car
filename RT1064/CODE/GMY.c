@@ -292,7 +292,7 @@ float Circle_R_calculate(void)
     }
     if (sum2 == 0)
     {
-        angle_val1=0
+        angle_val1=0;
     }
     else
     {

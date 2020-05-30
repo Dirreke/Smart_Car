@@ -314,7 +314,6 @@ void camera_dispose_main(void) //摄像头处理主函数
   Pic_particular();
   LR_Slope_fig();    //左右边线斜率计算
   Allwhite_find();   //查找全白行
-  //*GMY改到这里*//
   Pic_find_circle(); //寻找环状黑线及拐点 
   // Pic_find_leap();   //寻找突变点//没有用到，似乎在旧的圆环状态机中使用 search.c中，函数变量都注释掉了
   //Pic_Block_Rec();

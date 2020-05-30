@@ -33,7 +33,7 @@ extern void grow(int Pic_precal_done[60][80],int Pic_precal_flag[60][80],int i,i
 void Pic_Block_Rec(void);
 extern float L_R_Slope(char LR);
 void Cam_Break_Rec(void);
-void Cam_End_Detect(void); //End记录从上至下最后一行边界行
+// void Cam_End_Detect(void); //End记录从上至下最后一行边界行
 void SideLine_Find(int find_mode);
 int Pic_Pixle_jl(int row,int col);
 int Pic_Pixle_jr(int row,int col);
