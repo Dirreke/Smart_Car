@@ -4,32 +4,6 @@
     <fileChecksum>807938453</fileChecksum>
     <configuration>
         <name>nor_sdram_zf_dtcm</name>
-        <outputs>
-            <file>$PROJ_DIR$\..\..\CODE\control.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\Data_Send.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\diff.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\pwm_me.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\diff.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\search.h</file>
-            <file>$PROJ_DIR$\..\..\USER\src\main.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\EM.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\function.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\qtimer.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\search.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\control.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\Data_Send.h</file>
-            <file>$PROJ_DIR$\..\..\USER\inc\RT106X_config.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\SEEKFREE_MT9V03X_CSI_ME.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\SEEKFREE_MT9V03X_CSI_ME.h</file>
-            <file>$PROJ_DIR$\..\..\..\Libraries\seekfree_libraries\headfile.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\speed.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\pwm_me.c</file>
-            <file>$PROJ_DIR$\..\..\USER\inc\isr.h</file>
-            <file>$PROJ_DIR$\..\..\CODE\function.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\speed.h</file>
-            <file>$PROJ_DIR$\..\..\USER\src\isr.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\qtimer.c</file>
-            <file>$PROJ_DIR$\..\..\CODE\EM.c</file>
-        </outputs>
+        <outputs />
     </configuration>
 </project>
