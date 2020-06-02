@@ -458,7 +458,7 @@ void Road_rec(void)
   {
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////普通赛道→圆环
-    if ((Lef_break_point < 40 && Road == 0 && Rig_circle == 0 && Lef_circle == 1 && Rig_slope == 998 && Lef_slope != 998 && Rig[39] - Rig[37] < 5 && Rig[37] - Rig[35] < 5 && Rig[35] - Rig[33] < 5 && Rig[33] - Rig[31] < 5 && Rig[31] - Rig[29] < 5 && Rig[29] - Rig[27] < 5 && Rig[27] - Rig[25] < 5 && New_Lef[52] == -MIDMAP && Rig_edge < 10)) //左圆环：左边线,右边线：直通到底//&& Rig[11] != 78
+    if ((Lef_break_point < 40 && Road == 0 && Rig_circle == 0 && Lef_circle == 1 && Rig_slope == 998 && Lef_slope != 998 && Rig[39] - Rig[37] < 5 && Rig[37] - Rig[35] < 5 && Rig[35] - Rig[33] < 5 && Rig[33] - Rig[31] < 5 && Rig[31] - Rig[29] < 5 && Rig[29] - Rig[27] < 5 && Rig[27] - Rig[25] < 5 && (New_Lef[54] == -MIDMAP || New_Lef[55] == -MIDMAP || New_Lef[56] == -MIDMAP)&& Rig_edge < 10)) //左圆环：左边线,右边线：直通到底//&& Rig[11] != 78
     {
       Road0_flag = 0;
       Road11_count++;
@@ -469,7 +469,7 @@ void Road_rec(void)
       }
       return;
     }
-    else if (Rig_break_point < 40 && Road == 0 && Lef_circle == 0 && Rig_circle == 1 && Lef_slope == 998 && Rig_slope != 998 && Lef[25] - Lef[27] < 5 && Lef[27] - Lef[29] < 5 && Lef[29] - Lef[31] < 5 && Lef[31] - Lef[33] < 5 && Lef[33] - Lef[35] < 5 && Lef[35] - Lef[37] < 5 && Lef[37] - Lef[39] < 5 && New_Rig[52] == MIDMAP && Lef_edge < 10) //右圆环：右边线：突变点→拐点→突变点//&& Lef[11] != 2
+    else if (Rig_break_point < 40 && Road == 0 && Lef_circle == 0 && Rig_circle == 1 && Lef_slope == 998 && Rig_slope != 998 && Lef[25] - Lef[27] < 5 && Lef[27] - Lef[29] < 5 && Lef[29] - Lef[31] < 5 && Lef[31] - Lef[33] < 5 && Lef[33] - Lef[35] < 5 && Lef[35] - Lef[37] < 5 && Lef[37] - Lef[39] < 5 && (New_Rig[54] == MIDMAP || New_Rig[55] == MIDMAP || New_Rig[56] == MIDMAP) && Lef_edge < 10) //右圆环：右边线：突变点→拐点→突变点//&& Lef[11] != 2
     {
       Road0_flag = 0;
       Road21_count++;
@@ -687,7 +687,8 @@ void LR_Slope_fig()
 {
   int i;
   float xsum = 0, ysum = 0, xysum = 0, x2sum = 0, count = 0;
-  Lef_slope = Rig_slope = 0;
+  Lef_slope = 0;
+  Rig_slope = 0;
   int max = -800, min = 0;
   for (i = 0; i < 60; i++)
   {
@@ -725,7 +726,11 @@ void LR_Slope_fig()
   }
   max = 0;
   min = 800;
-  xsum = ysum = xysum = x2sum = count = 0;
+  xsum = 0;
+  ysum = 0;
+  xysum = 0;
+  x2sum = 0;
+  count = 0;
   for (i = 0; i < 60; i++)
   {
     if (i <= FIG_AREA_NEAR && i >= FIG_AREA_FAR3 && New_Rig[i] != MIDMAP)
@@ -1923,11 +1928,13 @@ void Pic_undistort(int L, int R)
 void Pic_find_circle(void)
 {
   int i;
-  Lef_circle = Rig_circle = 0;
-  Lef_break_point = Rig_break_point = 0;
-  for (i = 55; i > Fir_row + 11; i--) //从非全白行开始寻找
+  Lef_circle = 0;
+  Rig_circle = 0;
+  Lef_break_point = 0;
+  Rig_break_point = 0;
+  for (i = 55; i > Fir_row + 12; i--) //从非全白行开始寻找
   {
-    if (Last_col - Rig[i] < 2 || Last_col - Rig[i - 12] < 2) //从右边线离开右边界开始寻找
+    if (Last_col - Rig[i] < 2 ) //从右边线离开右边界开始寻找
     {
       continue;
     }
@@ -1941,16 +1948,20 @@ void Pic_find_circle(void)
     }
     */
 
-    if (Rig[i - 2] <= Rig[i] && Rig[i - 4] <= Rig[i - 2] && Rig[i - 6] <= Rig[i - 4] && Rig[i - 8] <= Rig[i - 6] && Rig[i - 10] <= Rig[i - 8] && Rig[i - 12] > Rig[i - 10] && Rig[i - 11] > Rig[i - 9] && abs(Rig[i - 8] - Rig[i - 6]) < 4 && abs(Rig[i - 6] - Rig[i - 4]) < 4 && abs(Rig[i - 4] - Rig[i - 2]) < 4 && abs(Rig[i - 2] - Rig[i]) < 4)
+    if (Rig[i - 2] <= Rig[i] && Rig[i - 4] <= Rig[i - 2] && Rig[i - 6] <= Rig[i - 4] && Rig[i - 8] <= Rig[i - 6] && Rig[i - 10] <= Rig[i - 8] &&
+        Rig[i - 12] > Rig[i - 10] && Rig[i - 11] > Rig[i - 9] && 
+        abs(Rig[i - 10] - Rig[i - 8]) < 4 && abs(Rig[i - 8] - Rig[i - 6]) < 4 && abs(Rig[i - 6] - Rig[i - 4]) < 4 && abs(Rig[i - 4] - Rig[i - 2]) < 4 && abs(Rig[i - 2] - Rig[i]) < 4 &&
+        abs(Rig[i - 12] - Rig[i - 10]) < 8 && abs(Rig[i - 11] - Rig[i - 9]) < 8)
+      
     {
       Rig_circle = 1;
       Rig_break_point = i;
       break;
     }
   }
-  for (i = 55; i > Fir_row + 11; i--)
+  for (i = 55; i > Fir_row + 12; i--)
   {
-    if (Lef[i] - Fir_col < 2 || Lef[i - 12] - Fir_col < 2)
+    if (Lef[i] - Fir_col < 2 )
     {
       continue;
     }
@@ -1961,10 +1972,13 @@ void Pic_find_circle(void)
     {
       Lef_circle=1;
       Lef_break_point=i-5;
-      break;
+      break;t
     }
     */
-    if (Lef[i - 2] >= Lef[i] && Lef[i - 4] >= Lef[i - 2] && Lef[i - 6] >= Lef[i - 4] && Lef[i - 8] >= Lef[i - 6] && Lef[i - 10] >= Lef[i - 8] && Lef[i - 12] < Lef[i - 10] && Lef[i - 11] < Lef[i - 9] && abs(Lef[i - 8] - Lef[i - 6]) < 4 && abs(Lef[i - 6] - Lef[i - 4]) < 4 && abs(Lef[i - 4] - Lef[i - 2]) < 4 && abs(Lef[i - 2] - Lef[i]) < 4)
+    if (Lef[i - 2] >= Lef[i] && Lef[i - 4] >= Lef[i - 2] && Lef[i - 6] >= Lef[i - 4] && Lef[i - 8] >= Lef[i - 6] && Lef[i - 10] >= Lef[i - 8] &&
+        Lef[i - 12] < Lef[i - 10] && Lef[i - 11] < Lef[i - 9] &&
+         abs(Lef[i - 10] - Lef[i - 8]) < 4 && abs(Lef[i - 8] - Lef[i - 6]) < 4 && abs(Lef[i - 6] - Lef[i - 4]) < 4 && abs(Lef[i - 4] - Lef[i - 2]) < 4 && abs(Lef[i - 2] - Lef[i]) < 4 &&
+          abs(Lef[i - 12] - Lef[i - 10]) < 8 &&  abs(Lef[i - 11] - Lef[i - 9]) < 8  )
     {
       Lef_circle = 1;
       Lef_break_point = i;
@@ -1993,7 +2007,7 @@ void start_stop_rec(void)
     int Black_line = 0;
     int road_half_width_original[40] = {35, 34, 34, 33, 32, 31, 30, 30, 29, 28, 27, 26, 25, 25, 24, 23, 22, 21, 20, 20, 19, 18, 17, 16, 15, 14, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 0};
 
-    if (Road == 0 && Road0_flag != 0 && Road0_flag != 1) //进起跑线
+    if (Road == 0 && Road0_flag != 2 && Road0_flag != 1) //进起跑线
     {
         start_waited++;
         if (start_waited > 600 && Lef_edge > 15)
