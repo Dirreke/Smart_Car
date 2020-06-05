@@ -1,0 +1,24 @@
+generic_list.pbi: \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\Libraries\nxp_libraries\components\lists\generic_list.c \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\drives\fsl_common.h \
+  I:\IAR\arm\inc\c\assert.h I:\IAR\arm\inc\c\ycheck.h \
+  I:\IAR\arm\inc\c\yvals.h I:\IAR\arm\inc\c\DLib_Defaults.h \
+  I:\\IAR\\arm\\inc\\c\\DLib_Config_Normal.h \
+  I:\IAR\arm\inc\c\DLib_Product.h I:\IAR\arm\inc\c\stdbool.h \
+  I:\IAR\arm\inc\c\stdint.h I:\IAR\arm\inc\c\string.h \
+  I:\IAR\arm\inc\c\ysizet.h I:\IAR\arm\inc\c\DLib_Product_string.h \
+  I:\IAR\arm\inc\c\stdlib.h I:\IAR\arm\inc\c\DLib_Product_stdlib.h \
+  I:\IAR\arm\inc\c\stddef.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\deceive\fsl_device_registers.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\deceive/MIMXRT1064.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include\core_cm7.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include/cmsis_version.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include/cmsis_compiler.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include\cmsis_iccarm.h \
+  I:\IAR\arm\inc\c\iccarm_builtin.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\CMSIS\Include/mpu_armv7.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\deceive/system_MIMXRT1064.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\deceive/MIMXRT1064_features.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\drives/fsl_clock.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\RT1064\IAR\program\..\..\..\Libraries\nxp_libraries\drives/fsl_common.h \
+  C:\Users\liuke\Desktop\iar64\Smart_Car\Libraries\nxp_libraries\components\lists/generic_list.h
